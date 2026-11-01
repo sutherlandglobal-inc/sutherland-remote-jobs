@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sutherland Global — Remote careers in customer experience & digital operations</title>
+<meta name="description" content="Join Sutherland Global. Remote roles in customer support, technical support, and back-office operations. AI-driven business transformation, 20+ countries, 10,001+ employees.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f0e2d;
+    --ink-2:#1a1f3d;
+    --body:#4a4f63;
+    --muted:#6b7189;
+    --line:#e4e6ef;
+    --bg:#ffffff;
+    --bg-soft:#f6f7fb;
+    --brand:#27235c;
+    --accent:#de1b54;
+    --accent-soft:#fce8ef;
+    --sky:#8ed1fc;
+    --brand-soft:#eeedf7;
+    --max:1140px;
+    --shadow-sm:0 1px 2px rgba(15,14,45,.06),0 1px 3px rgba(15,14,45,.04);
+    --shadow-md:0 10px 30px -12px rgba(15,14,45,.2);
+    --shadow-lg:0 30px 60px -25px rgba(15,14,45,.3);
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;overflow-x:hidden;
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    color:var(--body);background:var(--bg);line-height:1.6;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  h1,h2,h3{color:var(--ink);line-height:1.12;letter-spacing:-.02em;margin:0;font-weight:700}
+  p{margin:0}
+  a{color:inherit;text-decoration:none}
+  ul{margin:0;padding:0;list-style:none}
+  ::selection{background:var(--accent);color:#fff}
+
+  .container{width:min(100% - 2.5rem,var(--max));margin-inline:auto}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    font-weight:600;font-size:.95rem;padding:.85rem 1.35rem;border-radius:12px;
+    border:1px solid transparent;cursor:pointer;white-space:nowrap;
+    transition:transform .15s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn svg{width:18px;height:18px;flex:none}
+  .btn-primary{
+    background:linear-gradient(180deg,#e62a63,#de1b54);color:#fff;
+    box-shadow:0 10px 24px -10px rgba(222,27,84,.9),inset 0 1px 0 rgba(255,255,255,.18);
+  }
+  .btn-primary:hover{box-shadow:0 16px 34px -12px rgba(222,27,84,.95),inset 0 1px 0 rgba(255,255,255,.28)}
+  .btn-ghost{background:rgba(255,255,255,.06);color:#eef1f8;border-color:rgba(255,255,255,.18)}
+  .btn-ghost:hover{background:rgba(255,255,255,.13)}
+  .btn-light{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:var(--shadow-sm)}
+  .btn-light:hover{border-color:#c9cee0}
+  .btn-sm{padding:.6rem 1rem;font-size:.875rem;border-radius:10px}
+
+  a:focus-visible,.btn:focus-visible,summary:focus-visible,.nav-toggle:focus-visible{
+    outline:2px solid #a5b4fc;outline-offset:3px;border-radius:8px;
+  }
+
+  /* ---------- Header ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:60;
+    background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{display:flex;align-items:center;gap:1rem;height:68px}
+  .brand{display:inline-flex;align-items:center;gap:.7rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;font-size:1.05rem}
+  .brand-mark{
+    width:34px;height:34px;border-radius:9px;display:grid;place-items:center;color:#fff;flex:none;
+    background:linear-gradient(140deg,#27235c,#3a357a);
+    box-shadow:0 6px 14px -6px rgba(39,35,92,.9);
+  }
+  .brand-mark svg{width:19px;height:19px}
+  .brand-word{letter-spacing:.14em;font-size:.95rem;font-weight:800;color:var(--brand)}
+  .brand-word span{color:var(--accent)}
+
+  .nav{display:flex;align-items:center;gap:.15rem;margin-left:auto}
+  .nav a{font-size:.925rem;font-weight:500;color:var(--muted);padding:.5rem .8rem;border-radius:9px;transition:color .2s,background .2s}
+  .nav a:hover{color:var(--ink);background:var(--bg-soft)}
+
+  .header-cta{margin-left:.6rem}
+  .nav-toggle{
+    display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--line);
+    background:#fff;color:var(--ink);place-items:center;cursor:pointer;margin-left:auto;
+  }
+  .nav-toggle svg{width:20px;height:20px}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;color:#c8d0e0;padding:clamp(3rem,7vw,5.25rem) 0 0;overflow:hidden;
+    background:
+      radial-gradient(900px 520px at 12% -12%,rgba(39,35,92,.55),transparent 62%),
+      radial-gradient(760px 520px at 88% -6%,rgba(222,27,84,.22),transparent 58%),
+      linear-gradient(180deg,#0f0e2d 0%,#12102f 55%,#0f0e2d 100%);
+  }
+  .hero-bg{
+    position:absolute;inset:0;pointer-events:none;
+    background-image:
+      linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 15%,transparent 78%);
+    mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 15%,transparent 78%);
+  }
+  .hero-grid{
+    position:relative;display:grid;grid-template-columns:1.12fr .88fr;
+    gap:clamp(2rem,5vw,4rem);align-items:center;
+  }
+
+  .pill{
+    display:inline-flex;align-items:center;gap:.55rem;padding:.4rem .85rem;border-radius:999px;
+    border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);
+    font-size:.8rem;font-weight:500;letter-spacing:.01em;color:#dbe1ee;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.16);animation:pulse 2.4s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.85)}}
+
+  .hero h1{
+    margin:1.4rem 0 0;color:#fff;font-weight:800;letter-spacing:-.035em;
+    font-size:clamp(2.35rem,5vw,3.7rem);
+  }
+  .hero h1 em{
+    font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;
+    font-size:1.06em;letter-spacing:-.01em;
+    background:linear-gradient(100deg,#8ed1fc,#f5a3bd);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lead{
+    margin-top:1.35rem;max-width:36rem;color:#a8b3c7;
+    font-size:clamp(1rem,1.35vw,1.13rem);
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+  .hero-points{
+    display:flex;flex-wrap:wrap;gap:.65rem 1.6rem;margin-top:2rem;
+    font-size:.865rem;color:#93a0b6;
+  }
+  .hero-points li{display:flex;align-items:center;gap:.5rem}
+  .hero-points svg{width:16px;height:16px;color:#34d399;flex:none}
+
+  /* hero card */
+  .hero-card{
+    background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);
+    border-radius:20px;padding:1.1rem;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    box-shadow:0 40px 70px -40px rgba(0,0,0,.9);
+  }
+  .hero-card-head{display:flex;align-items:center;justify-content:space-between;padding:.35rem .4rem 1rem}
+  .hero-card-head span{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8b98ae}
+  .count-chip{font-size:.72rem;font-weight:600;color:#f5a3bd;background:rgba(222,27,84,.18);border:1px solid rgba(222,27,84,.25);padding:.2rem .55rem;border-radius:999px}
+  .role-row{
+    display:flex;align-items:center;gap:.85rem;padding:.8rem .85rem;border-radius:14px;
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);
+    margin-bottom:.6rem;transition:background .2s,border-color .2s;
+  }
+  .role-row:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.14)}
+  .role-row .chip{
+    width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:none;
+    background:rgba(142,209,252,.18);color:#8ed1fc;
+  }
+  .role-row .chip svg{width:19px;height:19px}
+  .role-row .txt strong{display:block;color:#fff;font-size:.9rem;font-weight:600;line-height:1.35}
+  .role-row .txt small{display:block;color:#8b98ae;font-size:.775rem}
+  .role-row .rate{margin-left:auto;font-size:.82rem;font-weight:600;color:#b9c2d4;white-space:nowrap}
+  .hero-card .btn{width:100%;margin-top:.35rem}
+
+  /* stats */
+  .stats{
+    position:relative;display:grid;grid-template-columns:repeat(4,1fr);
+    margin-top:clamp(2.5rem,6vw,4rem);border-top:1px solid rgba(255,255,255,.1);
+  }
+  .stat{padding:1.5rem 1rem 1.7rem;border-right:1px solid rgba(255,255,255,.08)}
+  .stat:last-child{border-right:none}
+  .stat b{display:block;font-size:clamp(1.45rem,2.6vw,2rem);color:#fff;font-weight:700;letter-spacing:-.03em;line-height:1.2}
+  .stat span{display:block;margin-top:.25rem;font-size:.82rem;color:#8b98ae}
+
+  /* ---------- Sections ---------- */
+  .section{padding:clamp(3.75rem,8vw,6rem) 0}
+  .section--soft{background:var(--bg-soft);border-block:1px solid var(--line)}
+  .section-head{max-width:660px;margin:0 auto clamp(2rem,4vw,3rem);text-align:center}
+  .eyebrow{
+    display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:.85rem;
+  }
+  .section-head h2{font-size:clamp(1.7rem,3.4vw,2.45rem)}
+  .section-head p{margin-top:.9rem;color:var(--muted);font-size:1.02rem}
+
+  /* ---------- Role cards ---------- */
+  .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+  .card{
+    display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);
+    border-radius:18px;padding:1.6rem;box-shadow:var(--shadow-sm);
+    transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#d8dbea}
+  .icon-chip{
+    width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+    background:var(--brand-soft);color:var(--brand);border:1px solid #e2e0f0;
+  }
+  .icon-chip svg{width:21px;height:21px}
+  .card h3{margin:1rem 0 .5rem;font-size:1.13rem}
+  .card p{font-size:.925rem;color:var(--muted)}
+  .ticks{display:grid;gap:.55rem;margin-top:1.15rem}
+  .ticks li{display:flex;align-items:flex-start;gap:.55rem;font-size:.875rem;color:var(--body)}
+  .ticks svg{width:16px;height:16px;color:var(--accent);flex:none;margin-top:.18rem}
+  .card-foot{
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+    margin-top:auto;padding-top:1.25rem;margin-top:1.35rem;border-top:1px dashed var(--line);
+  }
+  .card-foot .pay{font-size:.82rem;color:var(--muted)}
+  .card-foot .pay b{color:var(--ink);font-size:.9rem}
+  .arrow-link{display:inline-flex;align-items:center;gap:.35rem;font-size:.875rem;font-weight:600;color:var(--accent)}
+  .arrow-link svg{width:15px;height:15px;transition:transform .2s ease}
+  .arrow-link:hover svg{transform:translateX(3px)}
+
+  /* ---------- Steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.75rem}
+  .step .num{
+    width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+    font-weight:700;font-size:.95rem;color:var(--accent);
+    background:#fff;border:1px solid #f0d0dc;box-shadow:0 6px 16px -10px rgba(222,27,84,.8);
+    margin-bottom:1.1rem;
+  }
+  .step h3{font-size:1.02rem;margin-bottom:.45rem}
+  .step p{font-size:.9rem;color:var(--muted)}
+
+  /* ---------- Testimonials ---------- */
+  .quote{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.6rem;box-shadow:var(--shadow-sm);margin:0;display:flex;flex-direction:column}
+  .stars{color:#f59e0b;font-size:.95rem;letter-spacing:.16em;margin-bottom:.9rem}
+  .quote blockquote{margin:0 0 1.35rem;font-size:.96rem;line-height:1.68;color:#2b3446}
+  .quote blockquote::before{content:"“"}
+  .quote blockquote::after{content:"”"}
+  .quote figcaption{display:flex;align-items:center;gap:.75rem;margin-top:auto;padding-top:1.1rem;border-top:1px solid var(--line)}
+  .avatar{
+    width:40px;height:40px;border-radius:50%;display:grid;place-items:center;flex:none;
+    font-size:.78rem;font-weight:700;color:#fff;letter-spacing:.02em;
+    background:linear-gradient(140deg,#27235c,#4a3f8a);
+  }
+  .avatar.alt{background:linear-gradient(140deg,#0ea5e9,#27235c)}
+  .avatar.alt2{background:linear-gradient(140deg,#de1b54,#8e1b48)}
+  .quote figcaption strong{display:block;font-size:.9rem;color:var(--ink);font-weight:600;line-height:1.35}
+  .quote figcaption small{display:block;font-size:.79rem;color:var(--muted)}
+  .trust-line{margin-top:2rem;text-align:center;font-size:.875rem;color:var(--muted)}
+  .trust-line b{color:var(--ink)}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:780px;margin-inline:auto}
+  .faq details{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:0 1.15rem;margin-bottom:.7rem;box-shadow:var(--shadow-sm);
+    transition:border-color .2s,box-shadow .2s;
+  }
+  .faq details[open]{border-color:#cfd0e0;box-shadow:var(--shadow-md)}
+  .faq summary{
+    cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;
+    gap:1rem;padding:1.05rem 0;font-weight:600;font-size:.97rem;color:var(--ink);
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{
+    content:"";width:10px;height:10px;flex:none;margin-right:4px;
+    border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);
+    transform:rotate(45deg);transition:transform .25s ease;
+  }
+  .faq details[open] summary::after{transform:rotate(-135deg)}
+  .faq .answer{padding:0 0 1.15rem;font-size:.92rem;color:var(--muted);max-width:62ch}
+
+  /* ---------- CTA ---------- */
+  .cta-wrap{padding:clamp(3rem,6vw,5rem) 0}
+  .cta{
+    position:relative;overflow:hidden;text-align:center;border-radius:24px;
+    padding:clamp(2.5rem,6vw,4rem) clamp(1.25rem,4vw,3rem);
+    background:
+      radial-gradient(600px 340px at 20% 0%,rgba(39,35,92,.6),transparent 60%),
+      radial-gradient(520px 340px at 85% 100%,rgba(222,27,84,.35),transparent 60%),
+      linear-gradient(160deg,#12102f,#0f0e2d);
+    border:1px solid rgba(255,255,255,.1);
+    box-shadow:var(--shadow-lg);
+  }
+  .cta h2{color:#fff;font-size:clamp(1.6rem,3.4vw,2.35rem);letter-spacing:-.03em}
+  .cta p{margin:1rem auto 0;max-width:46ch;color:#a8b3c7;font-size:1rem}
+  .cta .btn{margin-top:1.9rem}
+  .cta-note{margin-top:1.1rem !important;font-size:.82rem;color:#7d8aa1}
+
+  /* ---------- Footer ---------- */
+  .site-footer{background:#fff;border-top:1px solid var(--line);padding:3rem 0 1.5rem}
+  .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2.5rem}
+  .footer-grid p{margin-top:.9rem;font-size:.9rem;color:var(--muted);max-width:38ch}
+  .footer-col h4{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0 0 1rem}
+  .footer-col a{display:block;font-size:.9rem;color:var(--muted);padding:.3rem 0;transition:color .2s}
+  .footer-col a:hover{color:var(--accent)}
+  .footer-bottom{
+    display:flex;flex-wrap:wrap;gap:.75rem;justify-content:space-between;align-items:center;
+    margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line);
+    font-size:.82rem;color:var(--muted);
+  }
+
+  /* ---------- Reveal ---------- */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-card{max-width:520px}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+    .footer-grid > div:first-child{grid-column:1 / -1}
+  }
+  @media (max-width:880px){
+    .nav{
+      position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;
+      align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--line);
+      padding:.75rem 1.25rem 1.25rem;box-shadow:var(--shadow-md);margin:0;
+    }
+    .nav.open{display:flex}
+    .nav a{padding:.75rem .5rem;border-radius:8px}
+    .nav-toggle{display:grid}
+    .header-cta{display:none}
+  }
+  @media (max-width:700px){
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stat{border-right:none;padding:1.25rem 1rem}
+    .stat:nth-child(odd){border-right:1px solid rgba(255,255,255,.08)}
+    .stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.08)}
+  }
+  @media (max-width:520px){
+    .footer-grid{grid-template-columns:1fr}
+    .hero-actions .btn{width:100%}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .dot{animation:none}
+    *{transition-duration:.01ms !important;animation-duration:.01ms !important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <!-- Fingerprint-inspired S mark -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3a7 7 0 0 0-7 7c0 2 .8 3.8 2 5"/>
+          <path d="M12 6a4 4 0 0 0-4 4c0 1.2.5 2.3 1.3 3"/>
+          <path d="M12 9a1 1 0 0 0-1 1c0 .5.2 1 .6 1.4"/>
+          <path d="M12 21a9 9 0 0 0 9-9"/>
+          <path d="M15 12a3 3 0 0 1-3 3"/>
+          <path d="M9 12a3 3 0 0 1 6 0"/>
+          <path d="M18 12a6 6 0 0 1-6 6"/>
+        </svg>
+      </span>
+      <span class="brand-word">SUTHERLAND<span>.</span></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#roles">Roles</a>
+      <a href="#how">How it works</a>
+      <a href="#stories">Stories</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <a class="btn btn-primary btn-sm header-cta" href="https://wa.me/qr/URUSYFE6YAZ7F1" target="_blank" rel="noopener">
+      Apply now
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="pill"><span class="dot" aria-hidden="true"></span> Now hiring · Remote across 20+ countries</span>
+
+      <h1>You are highly welcome to <em>Sutherland Global</em>.</h1>
+
+      <p class="lead">
+        It's a real pleasure having you here with us. Join a global team delivering
+        AI-driven business transformation for the world's leading brands — from the
+        comfort of your own home.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/qr/URUSYFE6YAZ7F1" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.5-.3z"/>
+            <path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 15 3.6 13.5 3.6 12 3.6 7.4 7.4 3.6 12 3.6S20.4 7.4 20.4 12 16.6 20.2 12 20.2z"/>
+          </svg>
+          Apply on WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#roles">See open roles</a>
+      </div>
+
+      <ul class="hero-points">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Founded 1986
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          10,001+ employees
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          200+ global clients
+        </li>
+      </ul>
+    </div>
+
+    <!-- floating role card -->
+    <aside class="hero-card" aria-label="Currently open positions">
+      <div class="hero-card-head">
+        <span>Open positions</span>
+        <span class="count-chip">Remote</span>
+      </div>
+
+      <div class="role-row">
+        <span class="chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </span>
+        <span class="txt"><strong>Customer Support</strong><small>Voice &amp; email · Full-time</small></span>
+        <span class="rate">Remote</span>
+      </div>
+
+      <div class="role-row">
+        <span class="chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="4" width="19" height="14" rx="2.5"/>
+            <path d="M8 21h8M12 18v3"/>
+          </svg>
+        </span>
+        <span class="txt"><strong>Technical Support</strong><small>Streaming &amp; tech · Full-time</small></span>
+        <span class="rate">Remote</span>
+      </div>
+
+      <div class="role-row">
+        <span class="chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="16" rx="2"/>
+            <path d="M3 9.5h18M9 9.5V20M15 9.5V20"/>
+          </svg>
+        </span>
+        <span class="txt"><strong>Back Office</strong><small>Data &amp; operations · Full-time</small></span>
+        <span class="rate">Remote</span>
+      </div>
+
+      <a class="btn btn-primary" href="https://wa.me/qr/URUSYFE6YAZ7F1" target="_blank" rel="noopener">
+        Get job details
+      </a>
+    </aside>
+  </div>
+
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><b>1986</b><span>Founded in Rochester, NY</span></div>
+      <div class="stat"><b>20+</b><span>Countries with delivery centers</span></div>
+      <div class="stat"><b>10,001+</b><span>Global employees</span></div>
+      <div class="stat"><b>200+</b><span>Blue-chip clients</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROLES ================= -->
+<section class="section" id="roles">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Open remote roles</span>
+      <h2>Build your career from anywhere</h2>
+      <p>Sutherland combines human-centered design with AI and automation. These are the teams hiring remotely right now.</p>
+    </div>
+
+    <div class="grid-3">
+      <!-- Customer Support -->
+      <article class="card reveal">
+        <span class="icon-chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </span>
+        <h3>Customer Support</h3>
+        <p>Be the voice of global brands. Handle inbound queries over phone and email, resolve issues, and create exceptional customer experiences.</p>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Equipment provided</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Paid training</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Career progression</li>
+        </ul>
+        <div class="card-foot">
+          <span class="pay">Full-time <b>· Remote</b></span>
+          <a class="arrow-link" href="https://wa.me/qr/URUSYFE6YAZ7F1" target="_blank" rel="noopener">
+            Apply
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Technical Support -->
+      <article class="card reveal">
+        <span class="icon-chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="4" width="19" height="14" rx="2.5"/>
+            <path d="M8 21h8M12 18v3"/>
+          </svg>
+        </span>
+        <h3>Technical Support</h3>
+        <p>Help customers get the most from streaming services, devices and digital platforms. Troubleshoot, guide and resolve with confidence.</p>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> All equipment supplied</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Structured onboarding</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Global team</li>
+        </ul>
+        <div class="card-foot">
+          <span class="pay">Full-time <b>· Remote</b></span>
+          <a class="arrow-link" href="https://wa.me/qr/URUSYFE6YAZ7F1" target="_blank" rel="noopener">
+            Apply
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Back Office -->
+      <article class="card reveal">
+        <span class="icon-chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="16" rx="2"/>
+            <path d="M3 9.5h18M9 9.5V20M15 9.5V20"/>
+          </svg>
+        </span>
+        <h3>Back Office &amp; Data</h3>
+        <p>Keep critical business operations moving. Process transactions, verify records and support digital operations for leading enterprises.</p>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Process-driven work</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Flexible shifts</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> AI-assisted tools</li>
+        </ul>
+        <div class="card-foot">
+          <span class="pay">Full-time <b>· Remote</b></span>
+          <a class="arrow-link" href="https://wa.me/qr/URUSYFE6YAZ7F1" target="_blank" rel="noopener">
+            Apply
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="section section--soft" id="how">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>From hello to first day in four steps</h2>
+      <p>No long interview loops. A short conversation, a skills check, and you're on your way.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">1</div>
+        <h3>Message us</h3>
+        <p>Send a quick hello on WhatsApp and tell us which remote role interests you.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">2</div>
+        <h3>Quick screening</h3>
+        <p>A short conversation plus a skills check so we can match you to the right team.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">3</div>
+        <h3>Get set up</h3>
+        <p>Receive your equipment, complete paid training, and meet your team lead.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">4</div>
+        <h3>Start earning</h3>
+        <p>Work from home, grow your skills, and build a long-term career with Sutherland.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section" id="stories">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Life at Sutherland</span>
+      <h2>What our people say</h2>
+      <p>Real voices from the global Sutherland team — people who started remotely and built something here.</p>
+    </div>
+
+    <div class="grid-3">
+      <figure class="quote reveal">
+        <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
+        <blockquote>
+          I applied on a Tuesday and had my first training session by Friday. The equipment arrived
+          at my door, the team lead was patient, and I've been with Sutherland for over a year now.
+        </blockquote>
+        <figcaption>
+          <span class="avatar" aria-hidden="true">AO</span>
+          <span>
+            <strong>Amara O.</strong>
+            <small>Customer Support · Remote</small>
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure class="quote reveal">
+        <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
+        <blockquote>
+          I'd never worked in tech support before. The paid training made all the difference —
+          I felt ready before I took my first call. The team is genuinely supportive.
+        </blockquote>
+        <figcaption>
+          <span class="avatar alt" aria-hidden="true">DK</span>
+          <span>
+            <strong>Daniel K.</strong>
+            <small>Technical Support · Remote</small>
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure class="quote reveal">
+        <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
+        <blockquote>
+          The flexibility is what keeps me here. I can manage my hours around my family, and
+          there's a clear path to move into a team lead role. It feels like a real career, not just a job.
+        </blockquote>
+        <figcaption>
+          <span class="avatar alt2" aria-hidden="true">PS</span>
+          <span>
+            <strong>Priya S.</strong>
+            <small>Back Office · Remote</small>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <p class="trust-line reveal">Trusted by <b>200+ global clients</b> · <b>10,001+</b> employees worldwide.</p>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section section--soft" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions before you apply</h2>
+    </div>
+
+    <div class="faq">
+      <details class="reveal" open>
+        <summary>Do I need previous experience?</summary>
+        <div class="answer">
+          Not necessarily. Sutherland provides paid training and structured onboarding for every
+          remote role. What matters most is your communication style, reliability, and willingness to learn.
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>Is equipment provided?</summary>
+        <div class="answer">
+          Yes. For most remote roles, Sutherland supplies the necessary equipment. You'll need a
+          reliable internet connection — typically at least 10 Mbps download and 2 Mbps upload.
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>Are these full-time roles?</summary>
+        <div class="answer">
+          The roles listed here are full-time remote positions. Shift patterns vary by team and
+          client, and your recruiter will walk you through the options during screening.
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>Where is Sutherland headquartered?</summary>
+        <div class="answer">
+          Sutherland is headquartered in Rochester, New York, and operates delivery centers across
+          20+ countries. This role is fully remote, so you can work from anywhere within the
+          hiring country.
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>How do I apply?</summary>
+        <div class="answer">
+          Tap any “Apply” button on this page to open WhatsApp, add us as a contact and send a short
+          message with the role you're interested in. Our team will reply with the next steps.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-wrap">
+  <div class="container">
+    <div class="cta reveal">
+      <h2>Ready to join Sutherland?</h2>
+      <p>It's a real pleasure having you here with us. Send us a message and let's find the right remote role for you.</p>
+      <a class="btn btn-primary" href="https://wa.me/qr/URUSYFE6YAZ7F1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.5-.3z"/>
+          <path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 15 3.6 13.5 3.6 12 3.6 7.4 7.4 3.6 12 3.6S20.4 7.4 20.4 12 16.6 20.2 12 20.2z"/>
+        </svg>
+        Apply on WhatsApp
+      </a>
+      <p class="cta-note">Official site: www.sutherlandglobal.com</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a7 7 0 0 0-7 7c0 2 .8 3.8 2 5"/>
+              <path d="M12 6a4 4 0 0 0-4 4c0 1.2.5 2.3 1.3 3"/>
+              <path d="M12 9a1 1 0 0 0-1 1c0 .5.2 1 .6 1.4"/>
+              <path d="M12 21a9 9 0 0 0 9-9"/>
+              <path d="M15 12a3 3 0 0 1-3 3"/>
+              <path d="M9 12a3 3 0 0 1 6 0"/>
+              <path d="M18 12a6 6 0 0 1-6 6"/>
+            </svg>
+          </span>
+          <span class="brand-word">SUTHERLAND<span>.</span></span>
+        </a>
+        <p>AI-driven business transformation. We design, run and automate operations for the world's leading brands — with a global team of 10,001+ people across 20+ countries.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#roles">Open roles</a>
+        <a href="#how">How it works</a>
+        <a href="#stories">Life at Sutherland</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <a href="https://wa.me/qr/URUSYFE6YAZ7F1" target="_blank" rel="noopener">WhatsApp applications</a>
+        <a href="https://www.sutherlandglobal.com" target="_blank" rel="noopener">www.sutherlandglobal.com</a>
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2025</span> Sutherland Global. All rights reserved.</span>
+      <span>Remote roles · 20+ countries · Founded 1986</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile navigation
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  nav.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Scroll reveal
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const items = document.querySelectorAll('.reveal');
+
+  if (prefersReduced || !('IntersectionObserver' in window)) {
+    items.forEach(el => el.classList.add('in'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transitionDelay = (i * 70) + 'ms';
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(el => io.observe(el));
+  }
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
